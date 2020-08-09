@@ -15,7 +15,7 @@ fetch(url)
         return abilities.map(function(ability){
             let li = createNode('li'),
                 span = createNode('span');
-            span.innerHtml = `${ability.name}`;
+            span.innerHTML = ability.name;
             append(li, span);
             append(ul, li);
         })
