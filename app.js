@@ -1,3 +1,4 @@
-fetch("https://pokeapi.co/api/v2/ability")
+let url = "https://pokeapi.co/api/v2/ability";
+fetch(url)
     .then(response => response.json())
     .then(data => console.log(data));
