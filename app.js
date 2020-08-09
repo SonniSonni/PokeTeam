@@ -5,7 +5,7 @@ function append(parent, el) {
     return parent.appendChild(el);
 }
 
-let url = "https://pokeapi.co/api/v2/pokemon";
+let url = "https://pokeapi.co/api/v2/pokemon/?limit=40";
 let ul = document.getElementById('ul');
 fetch(url)
     .then(response => response.json())
