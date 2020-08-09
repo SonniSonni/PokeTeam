@@ -5,17 +5,17 @@ function append(parent, el) {
     return parent.appendChild(el);
 }
 
-let url = "https://pokeapi.co/api/v2/ability";
+let url = "https://pokeapi.co/api/v2/pokemon";
 let ul = document.getElementById('ul');
 fetch(url)
     .then(response => response.json())
     .then(function(data) {
-        let abilities = data.results;
-        console.log(abilities)
-        return abilities.map(function(ability){
+        let pokemonList = data.results;
+        console.log(pokemonList)
+        return pokemonList.map(function(pokemon){
             let li = createNode('li'),
                 span = createNode('span');
-            span.innerHTML = ability.name;
+            span.innerHTML = pokemon.name;
             append(li, span);
             append(ul, li);
         })
