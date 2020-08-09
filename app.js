@@ -13,6 +13,7 @@ fetch(url)
         return abilities.map(function(ability){
             let li = createNode('li'),
                 span = createNode('span');
-                span.innerHtml = `$`
+            span.innerHtml = `${ability.name}`;
+
         })
     })
