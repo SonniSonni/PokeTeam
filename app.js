@@ -8,7 +8,9 @@ function append(parent, el) {
 let url = "https://pokeapi.co/api/v2/ability";
 fetch(url)
     .then(response => response.json())
-    .then(data => console.log(data))
     .then(function(data) {
-        
+        let abilities = data.results;
+        return abilities.map(function(author){
+            
+        })
     })
