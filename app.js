@@ -10,7 +10,9 @@ fetch(url)
     .then(response => response.json())
     .then(function(data) {
         let abilities = data.results;
-        return abilities.map(function(author){
-            
+        return abilities.map(function(ability){
+            let li = createNode('li'),
+                span = createNode('span');
+                span.innerHtml = `$`
         })
     })
