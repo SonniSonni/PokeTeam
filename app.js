@@ -25,3 +25,7 @@ fetch(url)
             append(ul, li);
         })
     })
+
+const setTeam = (pokeName) => {
+    let selector = 0;
+}
