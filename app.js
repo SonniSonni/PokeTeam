@@ -1,3 +1,12 @@
+const pokeTeam = [
+    document.getElementById('firs-poke'),
+    document.getElementById('seco-poke'),
+    document.getElementById('thir-poke'),
+    document.getElementById('four-poke'),
+    document.getElementById('fith-poke'),
+    document.getElementById('sixt-poke')
+]
+
 function createNode(element) {
     return document.createElement(element);
 }
