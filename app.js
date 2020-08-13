@@ -6,7 +6,7 @@ function append(parent, el) {
 }
 
 let url = "https://pokeapi.co/api/v2/pokemon/?limit=40";
-let ul = document.getElementById('ul');
+let ul = document.getElementById('PokeList');
 fetch(url)
     .then(response => response.json())
     .then(function(data) {
