@@ -36,7 +36,8 @@ fetch(url)
         })
     })
 
-const setTeam = (pokeName) => {
     let selector = 0;
+const setTeam = (pokeName) => {
     pokeTeam[selector].innerHTML = pokeName;
+    selector++;
 }
