@@ -28,7 +28,6 @@ fetch(url)
                 span = createNode('span');
             span.innerHTML = pokemon.name;
             span.onclick = function(e) {
-                this.style.color = 'red';
                 setTeam(this.innerHTML)
             }
             append(li, span);
@@ -39,5 +38,7 @@ fetch(url)
     let selector = 0;
 const setTeam = (pokeName) => {
     pokeTeam[selector].innerHTML = pokeName;
-    selector++;
+    if(selector < 5){
+        selector++;
+    }
 }
