@@ -16,6 +16,8 @@ function append(parent, el) {
 
 let url = "https://pokeapi.co/api/v2/pokemon/?limit=40";
 let ul = document.getElementById('poke-list');
+//List of pokemon in the team, max 6
+let pokeTeamList = [];
 
 ('poke-list');
 fetch(url)
@@ -36,8 +38,6 @@ fetch(url)
         })
     })
 
-    //List of pokemon in the team, max 6
-    let pokeTeamList = [];
 const insertToTeam = (pokeName) => {
     //Grabs name of old pokemon at end of list
     oldPokemon = pokeTeam[6].innerHTML;
