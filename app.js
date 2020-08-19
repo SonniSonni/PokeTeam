@@ -44,11 +44,13 @@ const insertToTeam = (pokeName) => {
     document.getElementById(pokeName).style.display = 'none';
     //Inserts new pokemon into pokeTeamList
     for (let i = 0; i < 6; i++){
+        //If the position in the team is empty and not the last position
         if (pokeTeamList[i] == "" && i != 5){
+            //Set new Pokemon name and set i to 6, should break loop
             pokemonTeamList[i] = pokeName;
             i=6;
         }
-        //if it is number 6 then return old pokemon
+        //if it is number 6 then return old pokemon, and set new one
         else if(i == 5){
             pokemonTeamList[5].pop();
             document.getElementById(oldPokemon).style.display = '';
