@@ -26,6 +26,7 @@ fetch(url)
         return pokemonList.map(function(pokemon){
             let li = createNode('li'),
                 span = createNode('span');
+                console.log(pokemon);
             span.innerHTML = pokemon.name;
             li.id = pokemon.name;
             span.onclick = function(e) {
@@ -43,5 +44,8 @@ const setTeam = (pokeName) => {
     document.getElementById(pokeName).style.display = 'none';
     if(selector < 5){
         selector++;
+    }
+    else{
+        document.getElementById(oldPokemon).style.display = '';
     }
 }
