@@ -50,3 +50,6 @@ const setTeam = (pokeName) => {
     }
 }
 
+const clickTeamItem = () => {
+
+};
