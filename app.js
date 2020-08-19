@@ -49,3 +49,4 @@ const setTeam = (pokeName) => {
         document.getElementById(oldPokemon).style.display = '';
     }
 }
+
