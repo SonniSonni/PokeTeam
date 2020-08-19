@@ -39,19 +39,20 @@ fetch(url)
 
 const insertToTeam = (pokeName) => {
     //Grabs name of old pokemon at end of list
-    oldPokemon = pokeTeamList[6];
+    oldPokemon = pokeTeamList[5];
     //Remove new pokemon from the list of pokemon
     document.getElementById(pokeName).style.display = 'none';
     //Inserts new pokemon into pokeTeamList
     for (let i = 0; i < 6; i++){
-        if (pokeTeamList[i] == ""){
+        if (pokeTeamList[i] == "" && i != 5){
             pokemonTeamList[i] = pokeName;
-            i=6;
+            i=5;
         }
         //if it is number 6 then return old pokemon
-        else if(i == 6){
-            pokemonTeamList[6].pop();
+        else if(i == 5){
+            pokemonTeamList[5].pop();
             document.getElementById(oldPokemon).style.display = '';
+            pokemonTeamList[i] = pokeName;
         }
     }
     //Calls mapTeam
