@@ -27,6 +27,7 @@ fetch(url)
             let li = createNode('li'),
                 span = createNode('span');
             span.innerHTML = pokemon.name;
+            li.id = pokemon.name;
             span.onclick = function(e) {
                 setTeam(this.innerHTML)
             }
@@ -37,7 +38,9 @@ fetch(url)
 
     let selector = 0;
 const setTeam = (pokeName) => {
+    oldPokemon = pokeTeam[selector].innerHTML;
     pokeTeam[selector].innerHTML = pokeName;
+    document.getElementById(pokeName).style.display = 'none';
     if(selector < 5){
         selector++;
     }
