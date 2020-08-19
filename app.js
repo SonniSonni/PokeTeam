@@ -15,7 +15,7 @@ function append(parent, el) {
 }
 
 let url = "https://pokeapi.co/api/v2/pokemon/?limit=40";
-let ul = document.getElementById
+let ul = document.getElementById('poke-list');
 
 ('poke-list');
 fetch(url)
