@@ -50,7 +50,6 @@ const setTeam = (pokeName) => {
     }
 }
 
-const clickTeamItem = (e) => {
-    pokeName = this.innerHTML;
+const clickTeamItem = (pokeName) => {
     console.log(pokeName);
 };
