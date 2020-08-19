@@ -52,4 +52,5 @@ const setTeam = (pokeName) => {
 
 const clickTeamItem = (pokeName) => {
     console.log(pokeName);
+    document.getElementById(pokeName).style.display = '';
 };
