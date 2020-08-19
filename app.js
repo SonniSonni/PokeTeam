@@ -47,14 +47,14 @@ const insertToTeam = (pokeName) => {
         //If the position in the team is empty and not the last position
         if (pokeTeamList[i] == "" && i != 5){
             //Set new Pokemon name and set i to 6, should break loop
-            pokemonTeamList[i] = pokeName;
+            pokeTeamList[i] = pokeName;
             i=6;
         }
         //if it is number 6 then return old pokemon, and set new one
         else if(i == 5){
-            pokemonTeamList[5].pop();
+            pokeTeamList[5].pop();
             document.getElementById(oldPokemon).style.display = '';
-            pokemonTeamList[i] = pokeName;
+            pokeTeamList[i] = pokeName;
         }
     }
     //Calls mapTeam
