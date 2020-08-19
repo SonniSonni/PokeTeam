@@ -29,26 +29,35 @@ fetch(url)
             span.innerHTML = pokemon.name;
             li.id = pokemon.name;
             span.onclick = function(e) {
-                setTeam(this.innerHTML)
+                insertToTeam(this.innerHTML)
             }
             append(li, span);
             append(ul, li);
         })
     })
 
-    let selector = 0;
+    //List of pokemon in the team, max 6
+    let pokeTeamList = [];
+const insertToTeam = (pokeName) => {
+    //Grabs name of old pokemon at end of list
+    oldPokemon = pokeTeam[6].innerHTML;
+    //Inserts new pokemon into pokeTeamList
 
-const setTeam = (pokeName) => {
-    oldPokemon = pokeTeam[selector].innerHTML;
-    pokeTeam[selector].innerHTML = pokeName;
+    //Calls mapTeam
+    mapTeam();
+
+    //Remove new pokemon from the list of pokemon
     document.getElementById(pokeName).style.display = 'none';
-    if(selector < 5){
-        selector++;
-    }
-    else{
+    //if it is number 6 then return old pokemon
+    if(selector == 6){
         document.getElementById(oldPokemon).style.display = '';
     }
-}
+
+//Goes through and inserts each pokemon into their correct team position
+const mapTeam = () => {
+    //Sets new pokeName in the Team based on the list
+    pokeTeam[selector].innerHTML = pokeTeamList[selector];
+};
 
 const clickTeamItem = (pokeName) => {
     console.log(pokeName);
