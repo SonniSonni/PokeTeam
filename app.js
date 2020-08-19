@@ -46,7 +46,7 @@ const insertToTeam = (pokeName) => {
     for (let i = 0; i < 6; i++){
         if (pokeTeamList[i] == "" && i != 5){
             pokemonTeamList[i] = pokeName;
-            i=5;
+            i=6;
         }
         //if it is number 6 then return old pokemon
         else if(i == 5){
