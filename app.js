@@ -26,7 +26,6 @@ fetch(url)
         return pokemonList.map(function(pokemon){
             let li = createNode('li'),
                 span = createNode('span');
-                console.log(pokemon);
             span.innerHTML = pokemon.name;
             li.id = pokemon.name;
             span.onclick = function(e) {
@@ -38,6 +37,7 @@ fetch(url)
     })
 
     let selector = 0;
+
 const setTeam = (pokeName) => {
     oldPokemon = pokeTeam[selector].innerHTML;
     pokeTeam[selector].innerHTML = pokeName;
@@ -50,6 +50,7 @@ const setTeam = (pokeName) => {
     }
 }
 
-const clickTeamItem = () => {
-
+const clickTeamItem = (e) => {
+    pokeName = this.innerHTML;
+    console.log(pokeName);
 };
