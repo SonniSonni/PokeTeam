@@ -42,7 +42,7 @@ const insertToTeam = (pokeName) => {
     //Grabs name of old pokemon at end of list
     oldPokemon = pokeTeam[6].innerHTML;
     //Inserts new pokemon into pokeTeamList
-
+    
     //Calls mapTeam
     mapTeam();
 
@@ -50,6 +50,7 @@ const insertToTeam = (pokeName) => {
     document.getElementById(pokeName).style.display = 'none';
     //if it is number 6 then return old pokemon
     if(selector == 6){
+        pokemonTeamList[6].pop();
         document.getElementById(oldPokemon).style.display = '';
     }
 
