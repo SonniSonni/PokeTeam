@@ -19,7 +19,6 @@ let ul = document.getElementById('poke-list');
 //List of pokemon in the team, max 6
 let pokeTeamList = [];
 
-('poke-list');
 fetch(url)
     .then(response => response.json())
     .then(function(data) {
@@ -31,7 +30,7 @@ fetch(url)
             span.innerHTML = pokemon.name;
             li.id = pokemon.name;
             span.onclick = function(e) {
-                insertToTeam(this.innerHTML)
+                insertToTeam(span.innerHTML);
             }
             append(li, span);
             append(ul, li);
@@ -40,24 +39,27 @@ fetch(url)
 
 const insertToTeam = (pokeName) => {
     //Grabs name of old pokemon at end of list
-    oldPokemon = pokeTeam[6].innerHTML;
-    //Inserts new pokemon into pokeTeamList
-    
-    //Calls mapTeam
-    mapTeam();
-
+    oldPokemon = pokeTeamList[6];
     //Remove new pokemon from the list of pokemon
     document.getElementById(pokeName).style.display = 'none';
-    //if it is number 6 then return old pokemon
-    if(selector == 6){
-        pokemonTeamList[6].pop();
-        document.getElementById(oldPokemon).style.display = '';
+    //Inserts new pokemon into pokeTeamList
+    for (let i = 0; i < 6; i++){
+        if (pokeTeamList[i] == ""){
+            pokemonTeamList[i] = pokeName;
+            i=6;
+        }
+        //if it is number 6 then return old pokemon
+        else if(i == 6){
+            pokemonTeamList[6].pop();
+            document.getElementById(oldPokemon).style.display = '';
+        }
     }
-
+    //Calls mapTeam
+    mapTeam();
+};
 //Goes through and inserts each pokemon into their correct team position
 const mapTeam = () => {
     //Sets new pokeName in the Team based on the list
-    pokeTeam[selector].innerHTML = pokeTeamList[selector];
 };
 
 const clickTeamItem = (pokeName) => {
