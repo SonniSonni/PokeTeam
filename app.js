@@ -17,7 +17,14 @@ function append(parent, el) {
 let url = "https://pokeapi.co/api/v2/pokemon/?limit=40";
 let ul = document.getElementById('poke-list');
 //List of pokemon in the team, max 6
-let pokeTeamList = [];
+let pokeTeamList = [
+    '',
+    '',
+    '',
+    '',
+    '',
+    ''
+];
 
 fetch(url)
     .then(response => response.json())
@@ -63,6 +70,9 @@ const insertToTeam = (pokeName) => {
 //Goes through and inserts each pokemon into their correct team position
 const mapTeam = () => {
     //Sets new pokeName in the Team based on the list
+    for (let i = 0; i < pokeTeam.length; i++) {
+        pokeTeam[i].innerHTML = pokeTeamList[i];
+    }
 };
 
 const clickTeamItem = (pokeName) => {
