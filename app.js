@@ -25,26 +25,30 @@ let pokeTeamList = [
     '',
     ''
 ];
-
+let pokemans;
 fetch(url)
     .then(response => response.json())
     .then(function(data) {
         let pokemonList = data.results;
-        console.log(pokemonList)
         return pokemonList.map(function(pokemon){
-            console.log(pokemon.height	
-                );
             let li = createNode('li'),
+                img = createNode('span'),
                 span = createNode('span');
+            fetch(`https://pokeapi.co/api/v2/pokemon/1`)
+                .then(response => response.json())
+                .then(function(data){
+                    img.innerHTML = data.sprites.front_default
+                });
             span.innerHTML = pokemon.name;
             li.id = pokemon.name;
             span.onclick = function(e) {
                 insertToTeam(span.innerHTML);
             }
+            append(li, img)
             append(li, span);
             append(ul, li);
         })
-    })
+    });
 
 const insertToTeam = (pokeName) => {
     //Remove new pokemon from the list of pokemon
