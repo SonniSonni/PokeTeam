@@ -14,7 +14,7 @@ function append(parent, el) {
     return parent.appendChild(el);
 }
 
-let url = "https://pokeapi.co/api/v2/pokemon/?limit=40";
+let url = "https://pokeapi.co/api/v2/pokemon/?limit=10";
 let ul = document.getElementById('poke-list');
 //List of pokemon in the team, max 6
 let pokeTeamList = [
@@ -32,6 +32,8 @@ fetch(url)
         let pokemonList = data.results;
         console.log(pokemonList)
         return pokemonList.map(function(pokemon){
+            console.log(pokemon.height	
+                );
             let li = createNode('li'),
                 span = createNode('span');
             span.innerHTML = pokemon.name;
@@ -79,5 +81,11 @@ const mapTeam = () => {
 
 const clickTeamItem = (pokeName) => {
     console.log(pokeName);
+    for (let i = 0; i < pokeTeamList.length; i++) {
+        if(pokeTeamList[i] == pokeName){
+            pokeTeamList[i] = '';
+            mapTeam();
+        }
+    }
     document.getElementById(pokeName).style.display = '';
 };
