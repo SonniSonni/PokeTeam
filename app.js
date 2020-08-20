@@ -34,7 +34,7 @@ fetch(url)
             let li = createNode('li'),
                 img = createNode('span'),
                 span = createNode('span');
-            fetch(`https://pokeapi.co/api/v2/pokemon/1`)
+            fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
                 .then(response => response.json())
                 .then(function(data){
                     img.innerHTML = data.sprites.front_default
