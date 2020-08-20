@@ -32,12 +32,12 @@ fetch(url)
         let pokemonList = data.results;
         return pokemonList.map(function(pokemon){
             let li = createNode('li'),
-                img = createNode('span'),
+                img = createNode('img'),
                 span = createNode('span');
             fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
                 .then(response => response.json())
                 .then(function(data){
-                    img.innerHTML = data.sprites.front_default
+                    img.src = data.sprites.front_default
                 });
             span.innerHTML = pokemon.name;
             li.id = pokemon.name;
