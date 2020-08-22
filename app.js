@@ -92,6 +92,7 @@ const insertToTeam = (pokeName, pokeImg) => {
             };
             //Set new pokemon name
             pokeTeamList[i].name = pokeName;
+            pokeTeamList[i].img = pokeImg;
         }
     }
     //Calls mapTeam
