@@ -16,7 +16,7 @@ function append(parent, el) {
     return parent.appendChild(el);
 }
 
-let url = "https://pokeapi.co/api/v2/pokemon/?limit=10";
+let url = "https://pokeapi.co/api/v2/pokemon/?limit=30";
 let ul = document.getElementById('poke-list');
 //List of pokemon in the team, max 6
 let pokeTeamList = [
