@@ -99,7 +99,7 @@ const insertToTeam = (pokeName, pokeImg) => {
 };
 //Goes through and inserts each pokemon into their correct team position
 const mapTeam = () => {
-    //Sets new pokeName in the Team based on the list
+    //Sets new pokeName and img in the Team based on the list
     for (let i = 0; i < pokeTeam.length; i++) {
         pokeTeam[i].firstElementChild.innerHTML = pokeTeamList[i].name;
         pokeTeam[i].children[1].src = pokeTeamList[i].img;
