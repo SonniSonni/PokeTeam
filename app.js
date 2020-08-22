@@ -61,7 +61,7 @@ fetch(url)
             span.innerHTML = pokemon.name;
             li.id = pokemon.name;
             span.onclick = function(e) {
-                insertToTeam(span.innerHTML);
+                insertToTeam(span.innerHTML, img.src);
             }
             append(li, img)
             append(li, span);
@@ -69,7 +69,7 @@ fetch(url)
         })
     });
 
-const insertToTeam = (pokeName) => {
+const insertToTeam = (pokeName, pokeImg) => {
     //Remove new pokemon from the list of pokemon
     console.log(pokeTeamList[4]);
     document.getElementById(pokeName).style.display = 'none';
@@ -79,6 +79,7 @@ const insertToTeam = (pokeName) => {
         if (pokeTeamList[i].name == "" && i != 5){
             //Set new Pokemon name and set i to 6, should break loop
             pokeTeamList[i].name = pokeName;
+            pokeTeamList[i].img = pokeImg;
             i=6;
         }
         //if it is number 6 then return old pokemon, and set new one
@@ -101,7 +102,7 @@ const mapTeam = () => {
     //Sets new pokeName in the Team based on the list
     for (let i = 0; i < pokeTeam.length; i++) {
         pokeTeam[i].firstElementChild.innerHTML = pokeTeamList[i].name;
-        //pokeTeam[i].children[1].innerHTML = pokeTeamList[i];
+        pokeTeam[i].children[1].src = pokeTeamList[i].img;
     }
 };
 
