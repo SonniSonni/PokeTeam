@@ -102,14 +102,14 @@ const insertToTeam = (pokeName, pokeImg) => {
 const mapTeam = () => {
     //Sets new pokeName and img in the Team based on the list
     for (let i = 0; i < pokeTeam.length; i++) {
-        pokeTeam[i].firstElementChild.innerHTML = pokeTeamList[i].name;
-        pokeTeam[i].children[1].src = pokeTeamList[i].img;
+        pokeTeam[i].firstElementChild.src = pokeTeamList[i].img;
+        pokeTeam[i].children[1].innerHTML = pokeTeamList[i].name;
     }
 };
 
 const clickTeamItem = (pokemon) => {
     //Pull the name from the span
-    pokeName = pokemon.firstElementChild.innerHTML;
+    pokeName = pokemon.children[1].innerHTML;
     //Search the pokeTeamList for the name of the clicked element, and reset its value
     for (let i = 0; i < pokeTeamList.length; i++) {
         if(pokeTeamList[i].name == pokeName){
