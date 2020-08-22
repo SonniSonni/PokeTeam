@@ -1,7 +1,9 @@
 #team-builder{
   display:flex;
 }
-
+#poke-list{
+  list-style: none;
+}
 #poke-team{
-
+  list-style: none;
 }
