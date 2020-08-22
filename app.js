@@ -81,7 +81,6 @@ const insertToTeam = (pokeName) => {
 const mapTeam = () => {
     //Sets new pokeName in the Team based on the list
     for (let i = 0; i < pokeTeam.length; i++) {
-        let span = createNode('span');
         pokeTeam[i].innerHTML = pokeTeamList[i];
     }
 };
