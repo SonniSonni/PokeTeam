@@ -7,9 +7,11 @@ const pokeTeam = [
     document.getElementById('sixt-poke')
 ]
 
+//Use to create an html element
 function createNode(element) {
     return document.createElement(element);
 }
+//Use to attach to a parent html element
 function append(parent, el) {
     return parent.appendChild(el);
 }
@@ -79,6 +81,7 @@ const insertToTeam = (pokeName) => {
 const mapTeam = () => {
     //Sets new pokeName in the Team based on the list
     for (let i = 0; i < pokeTeam.length; i++) {
+        let span = createNode('span');
         pokeTeam[i].innerHTML = pokeTeamList[i];
     }
 };
