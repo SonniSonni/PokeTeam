@@ -114,6 +114,7 @@ const clickTeamItem = (pokemon) => {
     for (let i = 0; i < pokeTeamList.length; i++) {
         if(pokeTeamList[i].name == pokeName){
             pokeTeamList[i].name = '';
+            pokeTeamList[i].img = '';
             //Call mapTeam to update team
             mapTeam();
         }
