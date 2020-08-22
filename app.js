@@ -81,7 +81,8 @@ const insertToTeam = (pokeName) => {
 const mapTeam = () => {
     //Sets new pokeName in the Team based on the list
     for (let i = 0; i < pokeTeam.length; i++) {
-        pokeTeam[i].innerHTML = pokeTeamList[i];
+        pokeTeam[i].firstElementChild.innerHTML = pokeTeamList[i];
+        pokeTeam[i].children[1].innerHTML = pokeTeamList[i];
     }
 };
 
