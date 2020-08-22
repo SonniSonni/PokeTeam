@@ -87,12 +87,16 @@ const mapTeam = () => {
 };
 
 const clickTeamItem = (pokemon) => {
+    //Pull the name from the span
     pokeName = pokemon.firstElementChild.innerHTML;
+    //Search the pokeTeamList for the name of the clicked element, and reset its value
     for (let i = 0; i < pokeTeamList.length; i++) {
         if(pokeTeamList[i] == pokeName){
             pokeTeamList[i] = '';
+            //Call mapTeam to update team
             mapTeam();
         }
     }
+    //Make pokemon re-appear on original list again
     document.getElementById(pokeName).style.display = '';
 };
