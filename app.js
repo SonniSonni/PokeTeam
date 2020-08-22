@@ -86,8 +86,8 @@ const mapTeam = () => {
     }
 };
 
-const clickTeamItem = (pokeName) => {
-    console.log(pokeName);
+const clickTeamItem = (pokemon) => {
+    pokeName = pokemon.firstElementChild.innerHTML;
     for (let i = 0; i < pokeTeamList.length; i++) {
         if(pokeTeamList[i] == pokeName){
             pokeTeamList[i] = '';
