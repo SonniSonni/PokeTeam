@@ -17,5 +17,7 @@
   list-style: none;
 }
 .team-item{
-
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
