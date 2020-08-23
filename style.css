@@ -1,11 +1,12 @@
 #team-builder{
   display:flex;
+  justify-content: space-around;
 }
 #poke-list{
-  margin-left:20em;
+  width: 35em;
   list-style: none;
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 7em 7em 7em 7em 7em;
   gap: 1em;
 }
 .list-group-item{
@@ -15,6 +16,8 @@
 }
 #poke-team{
   list-style: none;
+  display:flex;
+  width:45em;
 }
 .team-item{
   text-align: center;

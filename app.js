@@ -6,7 +6,6 @@ const pokeTeam = [
     document.getElementById('fith-poke'),
     document.getElementById('sixt-poke')
 ]
-
 //Use to create an html element
 function createNode(element) {
     return document.createElement(element);
@@ -16,32 +15,32 @@ function append(parent, el) {
     return parent.appendChild(el);
 }
 
-let url = "https://pokeapi.co/api/v2/pokemon/?limit=30";
+let url = "https://pokeapi.co/api/v2/pokemon/?limit=10";
 let ul = document.getElementById('poke-list');
 //List of pokemon in the team, max 6
 let pokeTeamList = [
     {
-        name:'',
+        name:'pokemon',
         img:'',
     },
     {
-        name:'',
+        name:'pokemon',
         img:'',
     },
     {
-        name:'',
+        name:'pokemon',
         img:'',
     },
     {
-        name:'',
+        name:'pokemon',
         img:'',
     },
     {
-        name:'',
+        name:'pokemon',
         img:'',
     },
     {
-        name:'',
+        name:'pokemon',
         img:'',
     }
 ];
@@ -77,7 +76,7 @@ const insertToTeam = (pokeName, pokeImg) => {
     //Inserts new pokemon into pokeTeamList
     for (let i = 0; i < 6; i++){     
         //If the position in the team is empty and not the last position
-        if (pokeTeamList[i].name == "" && i != 5){
+        if (pokeTeamList[i].name == "pokemon" && i != 5){
             //Set new Pokemon name and set i to 6, should break loop
             pokeTeamList[i].name = pokeName;
             pokeTeamList[i].img = pokeImg;
@@ -88,7 +87,7 @@ const insertToTeam = (pokeName, pokeImg) => {
             //Grabs name of old pokemon at end of list
             oldPokemon = pokeTeamList[i].name;
             //If the item isnt empty then return old pokemon
-            if(oldPokemon != ''){
+            if(oldPokemon != 'pokemon'){
                 document.getElementById(oldPokemon).style.display = '';
             };
             //Set new pokemon name
@@ -108,13 +107,15 @@ const mapTeam = () => {
     }
 };
 
+mapTeam();
+
 const clickTeamItem = (pokemon) => {
     //Pull the name from the span
     pokeName = pokemon.children[1].innerHTML;
     //Search the pokeTeamList for the name of the clicked element, and reset its value
     for (let i = 0; i < pokeTeamList.length; i++) {
         if(pokeTeamList[i].name == pokeName){
-            pokeTeamList[i].name = '';
+            pokeTeamList[i].name = 'pokemon';
             pokeTeamList[i].img = '';
             //Call mapTeam to update team
             mapTeam();
