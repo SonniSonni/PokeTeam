@@ -6,6 +6,7 @@
   list-style: none;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
+  gap: 1em;
 }
 .list-group-item{
   text-align: center;
