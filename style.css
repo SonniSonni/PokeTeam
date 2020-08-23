@@ -1,11 +1,12 @@
 #team-builder{
   display: grid;
-  grid-template-columns: 50% 10% 70%;
+  grid-template-columns: 50% 8% 70%;
 }
 #poke-list{
   margin: 0;
   padding: 0;
-  width: 40em;
+  width: 41em;
+  height: 30em;
   list-style: none;
   display: grid;
   grid-template-columns: 7em 7em 7em 7em 7em;
