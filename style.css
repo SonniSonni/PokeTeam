@@ -2,9 +2,15 @@
   display:flex;
 }
 #poke-list{
+  margin-left:20em;
   list-style: none;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
+}
+.list-group-item{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 #poke-team{
   list-style: none;
