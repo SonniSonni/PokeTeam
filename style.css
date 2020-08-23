@@ -1,8 +1,10 @@
 #team-builder{
-  display:flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 50% 10% 70%;
 }
 #poke-list{
+  margin: 0;
+  padding: 0;
   width: 35em;
   list-style: none;
   display: grid;
@@ -15,6 +17,8 @@
   flex-direction: column;
 }
 #poke-team{
+  margin: 0;
+  padding:0;
   list-style: none;
   display:flex;
   width:45em;
