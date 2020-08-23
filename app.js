@@ -20,27 +20,27 @@ let ul = document.getElementById('poke-list');
 //List of pokemon in the team, max 6
 let pokeTeamList = [
     {
-        name:'pokemon',
+        name:'',
         img:'/light-blue.png',
     },
     {
-        name:'pokemon',
+        name:'',
         img:'/light-blue.png',
     },
     {
-        name:'pokemon',
+        name:'',
         img:'/light-blue.png',
     },
     {
-        name:'pokemon',
+        name:'',
         img:'/light-blue.png',
     },
     {
-        name:'pokemon',
+        name:'',
         img:'/light-blue.png',
     },
     {
-        name:'pokemon',
+        name:'',
         img:'/light-blue.png',
     }
 ];
@@ -76,7 +76,7 @@ const insertToTeam = (pokeName, pokeImg) => {
     //Inserts new pokemon into pokeTeamList
     for (let i = 0; i < 6; i++){     
         //If the position in the team is empty and not the last position
-        if (pokeTeamList[i].name == "pokemon" && i != 5){
+        if (pokeTeamList[i].name == "" && i != 5){
             //Set new Pokemon name and set i to 6, should break loop
             pokeTeamList[i].name = pokeName;
             pokeTeamList[i].img = pokeImg;
@@ -87,7 +87,7 @@ const insertToTeam = (pokeName, pokeImg) => {
             //Grabs name of old pokemon at end of list
             oldPokemon = pokeTeamList[i].name;
             //If the item isnt empty then return old pokemon
-            if(oldPokemon != 'pokemon'){
+            if(oldPokemon != ''){
                 document.getElementById(oldPokemon).style.display = '';
             };
             //Set new pokemon name
@@ -115,7 +115,7 @@ const clickTeamItem = (pokemon) => {
     //Search the pokeTeamList for the name of the clicked element, and reset its value
     for (let i = 0; i < pokeTeamList.length; i++) {
         if(pokeTeamList[i].name == pokeName){
-            pokeTeamList[i].name = 'pokemon';
+            pokeTeamList[i].name = '';
             pokeTeamList[i].img = '/light-blue.png';
             //Call mapTeam to update team
             mapTeam();
