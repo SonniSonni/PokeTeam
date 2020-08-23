@@ -30,6 +30,7 @@
   width:7em;
   height:7em;
 }
-.img-wrapper{ 
-  background-color: blue;
+.team-img{ 
+  background-color: #42B4E6;
+  max-height:80%;
 }
