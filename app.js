@@ -61,7 +61,7 @@ fetch(url)
             span.innerHTML = pokemon.name;
             li.className = 'list-group-item'
             li.id = pokemon.name;
-            span.onclick = function(e) {
+            li.onclick = function(e) {
                 insertToTeam(span.innerHTML, img.src);
             }
             append(li, img)
