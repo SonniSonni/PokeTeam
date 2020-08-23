@@ -3,6 +3,8 @@
 }
 #poke-list{
   list-style: none;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
 }
 #poke-team{
   list-style: none;
