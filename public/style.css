@@ -9,8 +9,7 @@ html, body {
 #poke-list{
   margin: 0;
   padding: 0;
-  min-width:20em;
-  max-width: 45em;
+  width: 45em;
   height: 30em;
   list-style: none;
   display: grid;
