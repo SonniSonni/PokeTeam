@@ -1,15 +1,20 @@
+html, body {
+  margin:0;
+  padding:0;
+}
 #team-builder{
-  display: grid;
-  grid-template-columns: 50% 8% 70%;
+  display: flex;
+  justify-content: space-around;
 }
 #poke-list{
   margin: 0;
   padding: 0;
-  width: 41em;
+  min-width:20em;
+  max-width: 45em;
   height: 30em;
   list-style: none;
   display: grid;
-  grid-template-columns: 7em 7em 7em 7em 7em;
+  grid-template-columns:repeat(auto-fit, minmax(120px, 7em));
   gap: 1em;
   overflow: auto;
 }
