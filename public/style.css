@@ -28,6 +28,7 @@ html, body {
   list-style: none;
   justify-content: space-between;
   display:flex;
+  flex-wrap:wrap;
   width:45em;
 }
 .team-item{
