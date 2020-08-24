@@ -21,27 +21,27 @@ let ul = document.getElementById('poke-list');
 let pokeTeamList = [
     {
         name:'',
-        img:'/light-blue.png',
+        img:'./light-blue.png',
     },
     {
         name:'',
-        img:'/light-blue.png',
+        img:'./light-blue.png',
     },
     {
         name:'',
-        img:'/light-blue.png',
+        img:'./light-blue.png',
     },
     {
         name:'',
-        img:'/light-blue.png',
+        img:'./light-blue.png',
     },
     {
         name:'',
-        img:'/light-blue.png',
+        img:'./light-blue.png',
     },
     {
         name:'',
-        img:'/light-blue.png',
+        img:'./light-blue.png',
     }
 ];
 fetch(url)
@@ -116,7 +116,7 @@ const clickTeamItem = (pokemon) => {
     for (let i = 0; i < pokeTeamList.length; i++) {
         if(pokeTeamList[i].name == pokeName){
             pokeTeamList[i].name = '';
-            pokeTeamList[i].img = '/light-blue.png';
+            pokeTeamList[i].img = './light-blue.png';
             //Call mapTeam to update team
             mapTeam();
         }
