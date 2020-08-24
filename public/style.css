@@ -9,8 +9,8 @@
 #poke-list{
   margin: 0;
   padding: 0;
-  width: 45em;
-  height: 30em;
+  max-width: 45em;
+  max-height: 45em;
   list-style: none;
   display: grid;
   grid-template-columns:repeat(auto-fit, minmax(120px, 7em));
@@ -29,7 +29,7 @@
   justify-content: space-between;
   display:flex;
   flex-wrap:wrap;
-  width:45em;
+  max-width:45em;
 }
 .team-item{
   text-align: center;
@@ -46,5 +46,16 @@
 @media only screen and (max-width: 767px) {
   #team-builder{
     flex-direction: column;
+  }
+  #poke-list{
+    margin-left:3em;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #team-builder{
+    flex-direction: column;
+  }
+  #poke-list{
+    margin-left:1em;
   }
 }
